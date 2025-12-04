@@ -21,13 +21,14 @@ if (missing.length && process.env.NODE_ENV !== 'test') {
 }
 
 export const env = {
-  port: process.env.PORT || 5000,
+  port: process.env.PORT || 4002,
   mongoUri:
     process.env.MONGO_URI ||
     'mongodb://127.0.0.1:27017/weather_dashboard_dev',
   jwtSecret: process.env.JWT_SECRET || 'change-me',
   mapboxToken: process.env.MAPBOX_TOKEN || '',
   openWeatherKey: process.env.OPENWEATHER_KEY || '',
+  rapidApiKey: process.env.RAPID_API_KEY || '',
   frontendUrls: (process.env.FRONTEND_URLS || '').split(',').map((url) =>
     url.trim(),
   ),

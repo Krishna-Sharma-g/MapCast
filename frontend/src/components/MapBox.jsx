@@ -64,8 +64,12 @@ const MapBox = ({ center, selectedLocation, onMapClick, onMove }) => {
 
   useEffect(() => {
     if (!mapRef.current) return;
+    const targetCenter = selectedLocation
+      ? [selectedLocation.lng, selectedLocation.lat]
+      : [center.lng, center.lat];
+
     mapRef.current.easeTo({
-      center: [center.lng, center.lat],
+      center: targetCenter,
       zoom: selectedLocation ? 9 : 4,
       duration: 800,
     });

@@ -7,6 +7,7 @@ import authRoutes from './routes/authRoutes.js';
 import searchRoutes from './routes/searchRoutes.js';
 import weatherRoutes from './routes/weatherRoutes.js';
 import favoritesRoutes from './routes/favoritesRoutes.js';
+import newsRoutes from './routes/newsRoutes.js';
 
 const app = express();
 
@@ -34,6 +35,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/search', searchRoutes);
 app.use('/api/weather', weatherRoutes);
 app.use('/api/favorites', favoritesRoutes);
+app.use('/api/news', newsRoutes);
 
 app.use((err, req, res, next) => {
   const status = err.status || 500;

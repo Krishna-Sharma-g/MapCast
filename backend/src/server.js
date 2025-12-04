@@ -9,11 +9,9 @@ const start = async () => {
   try {
     await connectDB();
     server.listen(env.port, () => {
-      // eslint-disable-next-line no-console
       console.log(`Server running on port ${env.port}`);
     });
   } catch (error) {
-    // eslint-disable-next-line no-console
     console.error('Server failed to start', error);
     process.exit(1);
   }
