@@ -24,7 +24,15 @@
     "helmet": "^8.1.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^9.0.0",
-    "morgan": "^1.10.1"
+    "morgan": "^1.10.1",
+    "next": "16.0.7",
+    "react": "19.2.1",
+    "react-dom": "19.2.1",
+    "class-variance-authority": "0.7.1",
+    "clsx": "2.1.1",
+    "lucide-react": "0.555.0",
+    "tailwind-merge": "3.4.0",
+    "tailwindcss-animate": "1.0.7"
   },
   "devDependencies": {
     "@babel/core": "^7.28.5",
@@ -35,6 +43,12 @@
     "jest": "^30.2.0",
     "mongodb-memory-server": "^10.3.0",
     "nodemon": "^3.1.11",
-    "supertest": "^7.1.4"
+    "supertest": "^7.1.4",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "@types/node": "24.10.1",
+    "typescript": "5.9.3",
+    "tailwindcss": "4.1.17",
+    "postcss": "8.5.6"
   }
 }

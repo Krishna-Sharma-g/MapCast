@@ -2,14 +2,27 @@
   "version": 2,
   "builds": [
     {
-      "src": "server.js",
-      "use": "@vercel/node"
+      "src": "src/server.js",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": "src/**"
+      }
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "server.js"
+      "dest": "src/server.js"
     }
-  ]
+  ],
+  "env": {
+    "MONGO_URI": "@mongo_uri",
+    "JWT_SECRET": "@jwt_secret",
+    "MAPBOX_TOKEN": "@mapbox_token",
+    "OPENWEATHER_KEY": "@openweather_key",
+    "RAPID_API_KEY": "@rapid_api_key",
+    "FRONTEND_URLS": "@frontend_urls",
+    "PORT": "3000"
+  },
+  "regions": ["sfo1"]
 }

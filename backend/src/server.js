@@ -1,22 +1,24 @@
-import http from 'http';
-import app from './app.js';
-import { connectDB } from './config/db.js';
-import { env } from './config/env.js';
+import http from "http"
+import app from "./app.js"
+import { connectDB } from "./config/db.js"
 
-const server = http.createServer(app);
+const server = http.createServer(app)
 
 const start = async () => {
   try {
-    await connectDB();
-    server.listen(env.port, () => {
-      console.log(`Server running on port ${env.port}`);
-    });
+    await connectDB()
+    const port = process.env.PORT || 3000
+    server.listen(port, () => {
+      console.log(`Server running on port ${port}`)
+    })
   } catch (error) {
-    console.error('Server failed to start', error);
-    process.exit(1);
+    console.error("Server failed to start", error)
+    process.exit(1)
   }
-};
+}
 
-start();
+if (process.env.VERCEL_ENV !== "production" && !process.env.VERCEL) {
+  start()
+}
 
-export default server;
+export default server
