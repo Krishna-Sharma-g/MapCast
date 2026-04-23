@@ -2,13 +2,20 @@ auto_assign:
   enabled: true
   trigger_phrase: "I'd like to work on this"
   require_prior_merged_pr: false
+  max_assignments_per_issue: 1
 
 dco_check:
   enabled: true
   require_sign_off: true
+  failure_comment: "Please sign your commits with `Signed-off-by`."
 
 stale_management:
   enabled: false
 
 ai_pr_review:
-  enabled: false
+  enabled: true
+  provider: "openai"
+  model: "gpt-4.1-mini"
+  trigger: "on_pr_open"
+  review_comment_prefix: "🤖 Automated Review:"
+  max_files_reviewed: 10
