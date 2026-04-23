@@ -1,0 +1,14 @@
+auto_assign:
+  enabled: true
+  trigger_phrase: "I'd like to work on this"
+  require_prior_merged_pr: false
+
+dco_check:
+  enabled: true
+  require_sign_off: true
+
+stale_management:
+  enabled: false
+
+ai_pr_review:
+  enabled: false
